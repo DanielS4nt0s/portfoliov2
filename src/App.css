@@ -347,6 +347,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px 0 75px 0;
 }
+.skill button {
+  margin: -30px;
+  background-color: #666;
+}
 .skill-slider {
   width: 80%;
   margin: 0 auto;
@@ -500,11 +504,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-link a {
   text-decoration: none;
-  font-size: 20px;
   color: white;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  display: inline-block;
+  background: linear-gradient(
+    90.21deg,
+    rgba(56, 54, 170, 0.5) -5.91%,
+    rgba(47, 132, 189, 0.5) 111.58%
+  );
 }
-.proj-link a:hover {
-  color: black;
+.proj-link span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.proj-link span:after {
+  content: '➡️';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.proj-link:hover span {
+  padding-right: 25px;
+  color: #ffffff;
+}
+
+.proj-link:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 /************ Projects Css ************/
 .contact {
